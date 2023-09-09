@@ -40,7 +40,7 @@ class Pila:
             temp = temp.siguiente
             num_nodos -= 1
 
-def llenar_pila(num_nodos):
+def generar_numeros_aleatorios(num_nodos):
     datos = [random.randint(1, 100) for _ in range(num_nodos)]
     return datos
 
@@ -49,7 +49,7 @@ num_nodos = int(input("Ingrese el número de nodos a crear: "))
 if num_nodos == 0:
     print("Sin nodos, la lista queda vacia")
 else:
-    datos_aleatorios = llenar_pila(num_nodos)
+    datos_aleatorios = generar_numeros_aleatorios(num_nodos)
     for dato in datos_aleatorios:
         pila.apilar(dato)
     print("Pila inicial:")
